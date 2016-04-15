@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidBase.iml" filepath="$PROJECT_DIR$/AndroidBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customwidgetlib/customwidgetlib.iml" filepath="$PROJECT_DIR$/customwidgetlib/customwidgetlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/ptrlib/ptrlib.iml" filepath="$PROJECT_DIR$/ptrlib/ptrlib.iml" />
     </modules>
   </component>

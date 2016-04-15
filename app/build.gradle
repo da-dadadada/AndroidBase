@@ -33,4 +33,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.android.support:design:23.1.1'
     compile project(':ptrlib')
+    compile project(':customwidgetlib')
+    compile files('libs/universal-image-loader-1.9.4.jar')
 }
