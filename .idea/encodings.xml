@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/libs/universal-image-loader-1.9.4.jar" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lht/androidbase/test/testbanner/LocalImageHolderView.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lht/androidbase/test/testbanner/NetworkImageHolderView.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_header_cb.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_transformer.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/ConvenientBanner.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/ViewPagerScroller.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/adapter/CBPageAdapter.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/holder/CBViewHolderCreator.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/holder/Holder.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/listener/CBPageChangeListener.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/listener/OnItemClickListener.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/java/com/lht/customwidgetlib/banner/view/CBLoopViewPager.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/res/layout" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/customwidgetlib/src/main/res/values" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

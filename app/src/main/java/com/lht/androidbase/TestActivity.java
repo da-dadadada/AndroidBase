@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -13,6 +12,7 @@ import com.lht.androidbase.activity.ExampleListActivity;
 import com.lht.androidbase.activity.asyncprotected.MainActivity;
 import com.lht.androidbase.test.TestBusActivity;
 import com.lht.androidbase.test.TestPtrListActivity;
+import com.lht.androidbase.test.testbanner.TestBannerActivity;
 
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -55,6 +55,10 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.test_ptr:
                 start(TestPtrListActivity.class);
+                break;
+            case R.id.test_banner:
+                start(TestBannerActivity.class);
+                break;
             default:
                 break;
         }
