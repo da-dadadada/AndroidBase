@@ -64,7 +64,6 @@
             android:name=".test.TestPtrListActivity"
             android:label="@string/title_activity_test_ptr_list"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".test.testbanner.TestBannerActivity"></activity>
     </application>
 
 </manifest>
