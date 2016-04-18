@@ -2,15 +2,19 @@ package com.lht.androidbase.test.testbanner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.lht.androidbase.R;
 import com.lht.customwidgetlib.banner.AutoLooperBanner;
+import com.lht.customwidgetlib.banner.IBannerUpdate;
+import com.lht.customwidgetlib.banner.ImgRes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestBannerActivity extends AppCompatActivity {
+public class TestBannerActivity extends AppCompatActivity implements IBannerUpdate {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,9 @@ public class TestBannerActivity extends AppCompatActivity {
 
         AutoLooperBanner bannerLayout = (AutoLooperBanner) findViewById(R.id.banner);
         AutoLooperBanner bannerLayout2 = (AutoLooperBanner) findViewById(R.id.banner2);
+
+        bannerLayout.setIBannerUpdate(this);
+        bannerLayout2.setIBannerUpdate(this);
 
         final List<String> urls = new ArrayList<>();
         urls.add("http://img3.imgtn.bdimg.com/it/u=2674591031,2960331950&fm=23&gp=0.jpg");
@@ -41,5 +48,20 @@ public class TestBannerActivity extends AppCompatActivity {
         urls2.add("http://img3.imgtn.bdimg.com/it/u=2674591031,2960331950&fm=23&gp=0.jpg");
         urls2.add("http://img5.imgtn.bdimg.com/it/u=3639664762,1380171059&fm=23&gp=0.jpg");
         bannerLayout2.setViewUrls(urls2);
+    }
+
+    @Override
+    public void UpdateImage(ImgRes<?> res, ImageView imageView) {
+        if (res.getRes() instanceof Integer) {
+            Glide.with(imageView.getContext()).load(res.getRes()).centerCrop().into(imageView);
+        } else if (res.getRes() instanceof String) {
+            if (res.isDefaultExist()) {
+                Glide.with(imageView.getContext()).load(res.getRes()).placeholder(res.getDefaultUrlRes()).centerCrop().into(imageView);
+            } else {
+                Glide.with(imageView.getContext()).load(res.getRes()).centerCrop().into(imageView);
+            }
+        } else {
+
+        }
     }
 }

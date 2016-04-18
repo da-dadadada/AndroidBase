@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,7 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 
-import com.bumptech.glide.Glide;
+//import com.bumptech.glide.Glide;
 import com.lht.customwidgetlib.R;
 
 import java.lang.reflect.Field;
@@ -29,7 +30,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO 解决图片加载库 迁移出去
+ * <p><b>Package</b> com.lht.customwidgetlib.banner
+ * <p><b>Project</b> AndroidBase
+ * <p><b>Classname</b> AutoLooperBanner
+ * <p><b>Description</b>: 自动滚动的Banner
+ * <p/>
+ * <b> Attributes are declared as follows：</b>
+ * <p/>
+ * <b>something about indicator like size,color,shape and so on</b>
+ * <li>selectedIndicatorColor" format="color|reference"
+ * <li>unSelectedIndicatorColor" format="color|reference"
+ * <li>indicatorShape" format="enum"
+ * element"rect" value="0"
+ * element"oval" value="1"
+ * <li>selectedIndicatorHeight" format="dimension|reference"
+ * <li>selectedIndicatorWidth" format="dimension|reference"
+ * <li>unSelectedIndicatorHeight" format="dimension|reference"
+ * <li>unSelectedIndicatorWidth" format="dimension|reference"
+ * <li>indicatorPosition" format="enum
+ * element"centerBottom" value="0"
+ * element"rightBottom" value="1"
+ * element"leftBottom" value="2"
+ * element"centerTop" value="3"
+ * element"rightTop" value="4"
+ * element"leftTop" value="5"
+ * <li>indicatorSpace" format="dimension|reference"
+ * <li>indicatorMargin" format="dimension|reference"
+ * <p/>
+ * <li>autoPlayDuration" format="integer|reference" <I>ms formated</I>
+ * <li>scrollDuration" format="integer|reference" <I>ms formated</I>
+ * <li>isAutoPlay" format="boolean" <I>default is true</I>
+ * <li>defaultImage" format="integer|reference"
+ * <p/>
+ * <p> Created by leobert on 2016/4/18.
  */
 public class AutoLooperBanner extends RelativeLayout {
 
@@ -64,10 +97,16 @@ public class AutoLooperBanner extends RelativeLayout {
 
     private int defaultImage;
 
+    /**
+     * the shape of the indicator
+     */
     private enum Shape {
         rect, oval
     }
 
+    /**
+     * the location of indicator
+     */
     private enum Position {
         centerBottom,
         rightBottom,
@@ -75,6 +114,16 @@ public class AutoLooperBanner extends RelativeLayout {
         centerTop,
         rightTop,
         leftTop
+    }
+
+    private IBannerUpdate iBannerUpdate = null;
+
+    public void setIBannerUpdate(IBannerUpdate iBannerUpdate) {
+        this.iBannerUpdate = iBannerUpdate;
+    }
+
+    public IBannerUpdate getIBannerUpdate() {
+        return iBannerUpdate;
     }
 
     private OnBannerItemClickListener onBannerItemClickListener;
@@ -136,7 +185,7 @@ public class AutoLooperBanner extends RelativeLayout {
         autoPlayDuration = array.getInt(R.styleable.AutoLooperBanner_autoPlayDuration, autoPlayDuration);
         scrollDuration = array.getInt(R.styleable.AutoLooperBanner_scrollDuration, scrollDuration);
         isAutoPlay = array.getBoolean(R.styleable.AutoLooperBanner_isAutoPlay, isAutoPlay);
-        defaultImage = array.getResourceId(R.styleable.AutoLooperBanner_defaultImage,defaultImage);
+        defaultImage = array.getResourceId(R.styleable.AutoLooperBanner_defaultImage, defaultImage);
         array.recycle();
 
         //绘制未选中状态图形
@@ -206,7 +255,15 @@ public class AutoLooperBanner extends RelativeLayout {
             }
         });
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        Glide.with(getContext()).load(res).centerCrop().into(imageView);
+        if (iBannerUpdate != null) {
+            //local 情况不使用默认图
+            ImgRes<Integer> imgRes = new ImgRes<>(res);
+            iBannerUpdate.UpdateImage(imgRes, imageView);
+        } else {
+            Log.w(getClass().getSimpleName(), "you should provide a interface-impl to update View," +
+                    "use setIBannerUpdate(IBannerUpdate iBannerUpdate) ");
+        }
+//        Glide.with(getContext()).load(res).centerCrop().into(imageView);
         return imageView;
     }
 
@@ -246,11 +303,22 @@ public class AutoLooperBanner extends RelativeLayout {
             }
         });
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        if (defaultImage != 0){
-            Glide.with(getContext()).load(url).placeholder(defaultImage).centerCrop().into(imageView);
-        }else {
-            Glide.with(getContext()).load(url).centerCrop().into(imageView);
+        if (iBannerUpdate != null) {
+            //net 情况使用默认图,需要判断是否存在
+            ImgRes<String> imgRes = new ImgRes<>(url);
+            if (defaultImage != 0) {
+                imgRes.setDefaultUrlRes(defaultImage);
+            }
+            iBannerUpdate.UpdateImage(imgRes, imageView);
+        } else {
+            Log.w(getClass().getSimpleName(), "you should provide a interface-impl to update View," +
+                    "use setIBannerUpdate(IBannerUpdate iBannerUpdate) ");
         }
+//        if (defaultImage != 0) {
+//            Glide.with(getContext()).load(url).placeholder(defaultImage).centerCrop().into(imageView);
+//        } else {
+//            Glide.with(getContext()).load(url).centerCrop().into(imageView);
+//        }
         return imageView;
     }
 
@@ -465,5 +533,3 @@ public class AutoLooperBanner extends RelativeLayout {
         }
     }
 }
-
-
