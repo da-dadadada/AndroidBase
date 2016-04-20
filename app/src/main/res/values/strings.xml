@@ -10,4 +10,7 @@
 
     <string name="test">默认</string>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="action_example">Example</string>
+
 </resources>

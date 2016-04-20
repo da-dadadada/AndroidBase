@@ -10,9 +10,10 @@ import android.widget.LinearLayout;
 
 import com.lht.androidbase.activity.ExampleListActivity;
 import com.lht.androidbase.activity.asyncprotected.MainActivity;
-import com.lht.androidbase.test.TestBusActivity;
+//import com.lht.androidbase.test.TestBusActivity;
 import com.lht.androidbase.test.TestI18NActivity;
 import com.lht.androidbase.test.TestPtrListActivity;
+import com.lht.androidbase.test.anim.TestAnimActivity;
 import com.lht.androidbase.test.testbanner.TestBannerActivity;
 
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
@@ -66,13 +67,16 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.test_i18n:
                 start(TestI18NActivity.class);
                 break;
+            case R.id.test_anim:
+                start(TestAnimActivity.class);
+                break;
             default:
                 break;
         }
     }
 
     private void testBus() {
-        start(TestBusActivity.class);
+//        start(TestBusActivity.class);
     }
 
     private void start(Class<? extends Activity> clazz) {

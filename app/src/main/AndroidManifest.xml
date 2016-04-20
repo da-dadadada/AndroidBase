@@ -58,8 +58,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".test.TestBusActivity" />
-        <activity android:name=".test.TestBusActivity2" />
+        <!--<activity android:name=".test.TestBusActivity" />-->
+        <!--<activity android:name=".test.TestBusActivity2" />-->
         <activity
             android:name=".test.TestPtrListActivity"
             android:label="@string/title_activity_test_ptr_list"
@@ -68,6 +68,8 @@
         <activity
             android:name=".test.TestI18NActivity"
             android:launchMode="singleInstance"></activity>
+        <activity android:name=".test.anim.TestAnimActivity"></activity>
+        <activity android:name=".test.anim.ExampleActivity"></activity>
     </application>
 
 </manifest>
