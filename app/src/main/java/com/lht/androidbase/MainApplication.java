@@ -2,6 +2,7 @@ package com.lht.androidbase;
 
 import android.app.Application;
 
+import com.lht.androidbase.util.AppPreference;
 import com.lht.androidbase.util.msg.MsgBus;
 
 /**
@@ -23,6 +24,10 @@ public class MainApplication extends Application {
         //...
         MsgBus.destroy();
         super.onTerminate();
+    }
+
+    public AppPreference getAppPreference() {
+        return AppPreference.getInstance(this);
     }
 
 }

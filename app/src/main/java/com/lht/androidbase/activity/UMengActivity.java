@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.inputmethod.InputMethodManager;
 
+import com.lht.androidbase.MainApplication;
 import com.lht.androidbase.interfaces.umeng.IUmengReport;
+import com.lht.androidbase.util.AppPreference;
+import com.lht.androidbase.util.I18N;
 import com.umeng.analytics.MobclickAgent;
 
 
@@ -20,6 +23,8 @@ public abstract class UMengActivity extends AppCompatActivity implements IUmengR
 
     public final static String tag = "umeng";
 
+    private static boolean languageLoaded = false;
+
     /**
      * @param savedInstanceState
      */
@@ -31,6 +36,31 @@ public abstract class UMengActivity extends AppCompatActivity implements IUmengR
         // initView();
         // initVariable();
 //         initEvent();
+        autoLoadLanguage();
+    }
+
+    protected void autoLoadLanguage() {
+        if(languageLoaded)
+            return;
+        languageLoaded = true;
+        AppPreference appPreference = ((MainApplication)getApplication()).getAppPreference();
+        int languageCode = appPreference.getInt(I18N.KEY_LANGUAGE, 0);
+        I18N.Language language = null;
+        switch (languageCode) {
+            case 1:
+                language = I18N.Language.EN;
+                break;
+            case 2:
+                language = I18N.Language.ZH_CN;
+                break;
+            case 3:
+                language = I18N.Language.ZH_TW;
+                break;
+            default:
+                //跟随系统，不做设置? Locale.getDefault().getLanguage()
+                break;
+        }
+        I18N.changeLanguage(getActivity(),language);
     }
 
     @Override

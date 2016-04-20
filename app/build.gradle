@@ -28,11 +28,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //umeng
     compile files('libs/android-async-http-1.4.8.jar')
+    compile project(':ptrlib')
+    compile project(':customwidgetlib')
+    compile files('libs/universal-image-loader-1.9.4.jar')
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.android.support:design:23.1.1'
-    compile project(':ptrlib')
-    compile project(':customwidgetlib')
-    compile files('libs/universal-image-loader-1.9.4.jar')
+    compile 'com.android.support:support-v4:23.1.1'
 }

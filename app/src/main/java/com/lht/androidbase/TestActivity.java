@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import com.lht.androidbase.activity.ExampleListActivity;
 import com.lht.androidbase.activity.asyncprotected.MainActivity;
 import com.lht.androidbase.test.TestBusActivity;
+import com.lht.androidbase.test.TestI18NActivity;
 import com.lht.androidbase.test.TestPtrListActivity;
 import com.lht.androidbase.test.testbanner.TestBannerActivity;
 
@@ -58,6 +59,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.test_banner:
                 start(TestBannerActivity.class);
+                break;
+            case R.id.test_i18n:
+                start(TestI18NActivity.class);
                 break;
             default:
                 break;
