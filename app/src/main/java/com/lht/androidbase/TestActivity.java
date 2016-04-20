@@ -27,6 +27,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         setOnClick2Child(ll);
     }
 
+    /**
+     * @param viewGroup
+     */
     private void setOnClick2Child(ViewGroup viewGroup) {
         int count = viewGroup.getChildCount();
         for (int i = 0; i < count; i++) {
