@@ -14,6 +14,7 @@ import com.lht.androidbase.activity.asyncprotected.MainActivity;
 import com.lht.androidbase.test.TestI18NActivity;
 import com.lht.androidbase.test.TestPtrListActivity;
 import com.lht.androidbase.test.anim.TestAnimActivity;
+import com.lht.androidbase.test.codescan.TestScanActivity;
 import com.lht.androidbase.test.testbanner.TestBannerActivity;
 
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
@@ -69,6 +70,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.test_anim:
                 start(TestAnimActivity.class);
+                break;
+            case R.id.test_scan:
+                start(TestScanActivity.class);
                 break;
             default:
                 break;

@@ -3,7 +3,7 @@ package com.lht.androidbase;
 import android.app.Application;
 
 import com.lht.androidbase.util.AppPreference;
-import com.lht.androidbase.util.msg.MsgBus;
+//import com.lht.androidbase.util.msg.MsgBus;
 
 /**
  * @package com.lht.androidbase
@@ -22,7 +22,7 @@ public class MainApplication extends Application {
     @Override
     public void onTerminate() {
         //...
-        MsgBus.destroy();
+//        MsgBus.destroy();
         super.onTerminate();
     }
 

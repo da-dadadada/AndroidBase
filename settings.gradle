@@ -1,1 +1,1 @@
-include ':app', ':ptrlib', ':customwidgetlib'
+include ':app', ':ptrlib', ':customwidgetlib', ':codescanlib'

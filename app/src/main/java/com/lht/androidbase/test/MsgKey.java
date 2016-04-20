@@ -1,6 +1,6 @@
 package com.lht.androidbase.test;
 
-import com.lht.androidbase.util.msg.MsgBusHint;
+//import com.lht.androidbase.util.msg.MsgBusHint;
 
 /**
  * @package com.lht.androidbase.test
@@ -10,9 +10,9 @@ import com.lht.androidbase.util.msg.MsgBusHint;
  * Created by leobert on 2016/4/12.
  */
 public interface MsgKey {
-    @MsgBusHint
+//    @MsgBusHint
     String KEY1 = "KEY1";
 
-    @MsgBusHint
+//    @MsgBusHint
     String KEY2 = "KEY2";
 }
