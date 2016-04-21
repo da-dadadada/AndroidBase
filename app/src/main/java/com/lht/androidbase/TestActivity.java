@@ -13,6 +13,7 @@ import com.lht.androidbase.activity.asyncprotected.MainActivity;
 //import com.lht.androidbase.test.TestBusActivity;
 import com.lht.androidbase.test.TestI18NActivity;
 import com.lht.androidbase.test.TestPtrListActivity;
+import com.lht.androidbase.test.TestVideoActivity;
 import com.lht.androidbase.test.anim.TestAnimActivity;
 import com.lht.androidbase.test.codescan.TestScanActivity;
 import com.lht.androidbase.test.testbanner.TestBannerActivity;
@@ -73,6 +74,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.test_scan:
                 start(TestScanActivity.class);
+                break;
+            case R.id.test_video:
+                start(TestVideoActivity.class);
                 break;
             default:
                 break;
