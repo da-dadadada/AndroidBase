@@ -8,6 +8,9 @@ package com.lht.androidbase.interfaces.umeng;
  * Created by leobert on 2016/4/1.
  */
 public interface IUmengReport extends  IUmengEventKey{
+    /**
+     * @param pageName
+     */
     void reportPageStart(String pageName);
 
     /**

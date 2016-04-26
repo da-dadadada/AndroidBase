@@ -1,17 +1,15 @@
 package com.lht.androidbase.customview;
 
-import java.util.HashMap;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.lht.androidbase.R;
+
+import java.util.HashMap;
 
 
 /**

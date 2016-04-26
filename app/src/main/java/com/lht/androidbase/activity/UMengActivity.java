@@ -3,12 +3,14 @@ package com.lht.androidbase.activity;
 import java.util.HashMap;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.inputmethod.InputMethodManager;
 
 import com.lht.androidbase.MainApplication;
 import com.lht.androidbase.interfaces.umeng.IUmengReport;
+import com.lht.androidbase.test.codescan.TestScanActivity;
 import com.lht.androidbase.util.AppPreference;
 import com.lht.androidbase.util.I18N;
 import com.umeng.analytics.MobclickAgent;
@@ -185,5 +187,10 @@ public abstract class UMengActivity extends AppCompatActivity implements IUmengR
 //		DLog.d(getClass(), "设置最终的弹出窗");
 //		this.pw = cpw;
 //	}
+    
+    protected void startActivity(Class<? extends Activity> clazz ) {
+        Intent intent = new Intent(getActivity(),clazz);
+        startActivity(intent);
+    }
 
 }
