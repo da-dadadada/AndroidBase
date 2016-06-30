@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.lht.chuangyiyun"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+    }
+    //配置keystore签名
+    signingConfigs {
+        //使用发布签名
+        debug {
+            storeFile file("lhtReleaseSignKey.jks")
+            storePassword 'lhtx_456'
+            keyAlias "lht"
+            keyPassword 'lhtx_456'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', exclude: 'fastjson-1.2.5.jar', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //umeng
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile project(':ptrlib')
+    compile project(':customwidgetlib')
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    //eventbus
+    //ainm
+    compile project(':codescanlib')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile files('libs/picasso.jar')
+    compile files('libs/lite-orm-1.7.0.jar')
+    compile project(':jsbridge_lib')
+    compile files('libs/fastjson-1.2.5.jar')
+    compile files('libs/Android-Async-Http.jar')
+    compile files('libs/Android-Async-Http1.4.8.jar')
+    compile project(':materialintro')
+}
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.chuangyiyun.test.TestBarActivity">
+
+    <com.lht.chuangyiyun.customview.TitleBar
+        android:id="@+id/titlebar"
+        style="@style/title"></com.lht.chuangyiyun.customview.TitleBar>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/testbar_titlebar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></FrameLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,1 @@
+include ':app', ':ptrlib', ':customwidgetlib', ':codescanlib', ':jsbridge_lib', ':materialintro'

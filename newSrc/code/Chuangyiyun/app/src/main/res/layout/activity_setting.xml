@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lht.chuangyiyun.activity.asyncprotected.SettingActivity">
+
+
+    <include
+        layout="@layout/bar_title_simple"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp">
+
+        <!--TODO define at all strings and replace it-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--手机绑定-->
+            <LinearLayout
+                android:id="@+id/setting_ll_bindphone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机绑定" />
+
+            </LinearLayout>
+
+            <!--实名认证-->
+            <LinearLayout
+                android:id="@+id/setting_ll_certify"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="实名认证" />
+            </LinearLayout>
+            <!--密码重置-->
+            <LinearLayout
+                android:id="@+id/setting_ll_resetpwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码重置" />
+            </LinearLayout>
+            <!--版本更新-->
+            <LinearLayout
+                android:id="@+id/setting_ll_checkupdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="版本更新" />
+            </LinearLayout>
+            <!--清除缓存-->
+            <LinearLayout
+                android:id="@+id/setting_ll_cleancache"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清除缓存" />
+            </LinearLayout>
+            <!--意见反馈-->
+            <LinearLayout
+                android:id="@+id/setting_ll_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="意见反馈" />
+            </LinearLayout>
+
+            <!--logout-->
+            <Button
+                android:id="@+id/setting_btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="logout" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

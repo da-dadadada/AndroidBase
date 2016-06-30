@@ -1,0 +1,74 @@
+DropOut(DropOutAnimator.class), 丢出效果
+Landing(LandingAnimator.class), 缩小淡入到正常
+TakingOff(TakingOffAnimator.class), 膨胀淡出消失
+
+Flash(FlashAnimator.class), 闪烁
+Pulse(PulseAnimator.class), 膨胀收缩到正常
+RubberBand(RubberBandAnimator.class), 弹性横向拉伸
+Shake(ShakeAnimator.class), 横向摇晃
+Swing(SwingAnimator.class), 摇摆效果
+Wobble(WobbleAnimator.class), 猛烈的摆动
+Bounce(BounceAnimator.class), 反弹效果（垂直）
+Tada(TadaAnimator.class), 波动效果
+StandUp(StandUpAnimator.class), 站立效果
+Wave(WaveAnimator.class), 比较突兀的摆动
+
+Hinge(HingeAnimator.class), 铰链脱离
+RollIn(RollInAnimator.class), 卷入
+RollOut(RollOutAnimator.class), 卷出
+
+BounceIn(BounceInAnimator.class), 由远到近的反弹
+BounceInDown(BounceInDownAnimator.class), 顶部掉落反弹
+BounceInLeft(BounceInLeftAnimator.class), 左侧快入反弹
+BounceInRight(BounceInRightAnimator.class), 右侧快入反弹
+BounceInUp(BounceInUpAnimator.class), 下侧快入反弹
+
+FadeIn(FadeInAnimator.class), 淡入
+FadeInUp(FadeInUpAnimator.class), 下侧淡入
+FadeInDown(FadeInDownAnimator.class), 上侧淡入
+FadeInLeft(FadeInLeftAnimator.class), 左侧淡入
+FadeInRight(FadeInRightAnimator.class), 右侧淡入
+
+FadeOut(FadeOutAnimator.class), 淡出
+FadeOutDown(FadeOutDownAnimator.class), 下侧淡出
+FadeOutLeft(FadeOutLeftAnimator.class), 向左侧淡出
+FadeOutRight(FadeOutRightAnimator.class), 向右侧淡出
+FadeOutUp(FadeOutUpAnimator.class), 向上侧淡出
+
+FlipInX(FlipInXAnimator.class), X轴翻转出现
+FlipOutX(FlipOutXAnimator.class), X轴翻转消失
+
+FlipOutY(FlipOutYAnimator.class), Y轴翻转消失
+RotateIn(RotateInAnimator.class), 旋转一圈进入
+RotateInDownLeft(RotateInDownLeftAnimator.class), 左上角旋转进入
+RotateInDownRight(RotateInDownRightAnimator.class), 右上角旋转进入
+RotateInUpLeft(RotateInUpLeftAnimator.class), 左下角旋转进入
+RotateInUpRight(RotateInUpRightAnimator.class), 右下角旋转进入
+
+RotateOut(RotateOutAnimator.class), 
+RotateOutDownLeft(RotateOutDownLeftAnimator.class),
+RotateOutDownRight(RotateOutDownRightAnimator.class),
+RotateOutUpLeft(RotateOutUpLeftAnimator.class),
+RotateOutUpRight(RotateOutUpRightAnimator.class),
+
+SlideInLeft(SlideInLeftAnimator.class),
+SlideInRight(SlideInRightAnimator.class),
+SlideInUp(SlideInUpAnimator.class),
+SlideInDown(SlideInDownAnimator.class),
+
+SlideOutLeft(SlideOutLeftAnimator.class),
+SlideOutRight(SlideOutRightAnimator.class),
+SlideOutUp(SlideOutUpAnimator.class),
+SlideOutDown(SlideOutDownAnimator.class),
+
+ZoomIn(ZoomInAnimator.class),
+ZoomInDown(ZoomInDownAnimator.class),
+ZoomInLeft(ZoomInLeftAnimator.class),
+ZoomInRight(ZoomInRightAnimator.class),
+ZoomInUp(ZoomInUpAnimator.class),
+
+ZoomOut(ZoomOutAnimator.class),
+ZoomOutDown(ZoomOutDownAnimator.class),
+ZoomOutLeft(ZoomOutLeftAnimator.class),
+ZoomOutRight(ZoomOutRightAnimator.class),
+ZoomOutUp(ZoomOutUpAnimator.class);
